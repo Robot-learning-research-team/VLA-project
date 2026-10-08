@@ -1,0 +1,61 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+.Python
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# ---- Data & model artifacts (host on Hugging Face Hub, not git) ----
+vla_dataset_raw/
+vla_lerobot/
+outputs/
+checkpoints/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+
+# ---- Training logs ----
+wandb/
+runs/
+*.log
+
+# ---- ROS2 / colcon (if a workspace lives here) ----
+install/
+log/
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+
+# ---- Secrets / local config ----
+.env
+*.env
+*.local
+
+# ---- Editors / OS ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- LaTeX build artifacts (keep .tex, .pdf, and figures) ----
+paper/*.aux
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+paper/*.log
+
+# NOTE: do NOT ignore *.png / *.mp4 globally — paper figures and hardware photos
+# are tracked; large media lives only inside the ignored data/output folders above.
