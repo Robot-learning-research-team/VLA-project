@@ -1,0 +1,17 @@
+# Zivid venv (teleop, snimanje/record, rollout klijent)
+# Napravljen sa: python3 -m venv --system-site-packages ~/venvs/zivid
+#   (nasleđuje ROS2 Humble rclpy sa sistema)
+# Očišćeno iz `pip freeze` — izostavljeni ROS2/sistemski paketi i lokalne
+# editable putanje koje ne postoje van robot mašine.
+
+# --- kamera i numerika ---
+zivid==2.17.2
+numpy==1.26.4
+scipy==1.8.0
+open3d==0.19.0          # op'ciono (3D/point-cloud alati; za 2D rollout nije nužan)
+
+# --- teleoperacija ---
+teleop==0.1.5           # osnovni paket sa PyPI-ja; naš izmenjeni __main__.py je u forku
+
+# NAPOMENA: rclpy, std_msgs, sensor_msgs i ostali ROS2 paketi dolaze iz
+# ROS2 Humble (--system-site-packages), ne instaliraju se preko pip-a.

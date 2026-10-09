@@ -1,0 +1,48 @@
+# Conda okruženje (trening, konverzija faza2, policy_server)
+# Očišćeno iz `pip freeze` — izostavljeni ROS2/sistemski paketi i lokalne
+# editable putanje koje ne postoje van robot mašine.
+#
+# lerobot: instalira se iz source-a (fork), NE sa PyPI-ja:
+#   git clone https://github.com/tinapetrovic05/lerobot
+#   pip install -e lerobot
+#
+# torch: CUDA build (kod nas CUDA 13). Instaliraj odgovarajući build za svoju CUDA.
+
+# --- deep learning / VLA stack ---
+torch==2.11.0
+torchvision==0.26.0
+torchcodec==0.11.1
+numpy==2.2.6
+datasets==4.8.5
+huggingface_hub==1.28.0
+hf-xet==1.6.0
+safetensors==0.8.0
+accelerate==1.14.0
+transformers==5.5.4
+tokenizers==0.22.2
+diffusers==0.39.0
+einops==0.8.2
+draccus==0.11.6
+wandb==0.25.0
+
+# --- video / slike / podaci ---
+av==15.1.0
+opencv-python-headless==4.13.0.92
+imageio==2.37.4
+scikit-image==0.26.0
+pillow==12.1.0
+pandas==2.3.3
+scipy==1.18.0
+matplotlib==3.11.1
+jsonlines==4.0.0
+num2words==0.5.14
+termcolor==3.3.0
+
+# --- PushT simulacija (gym-pusht benchmark) ---
+gymnasium==1.3.0
+gym-pusht==0.1.6
+pymunk==6.11.1
+pygame==2.6.1
+
+# NAPOMENA: rclpy i svi ROS2 msg paketi (moveit, tf2, sensor_msgs...) dolaze iz
+# ROS2 Humble (sourced), ne preko pip-a. teleop==0.1.5 je dostupan na PyPI-ju.
