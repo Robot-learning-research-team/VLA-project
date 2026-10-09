@@ -180,7 +180,7 @@ The report (source and PDF) is in [`paper/`](paper/).
 ## Acknowledgements
 
 - [SmolVLA](https://arxiv.org/abs/2506.01844) and the [LeRobot](https://github.com/huggingface/lerobot) ecosystem.
-- Phone teleoperation based on [SpesRobotics/teleop](https://github.com/SpesRobotics/teleop).
+- Teleoperation uses our fork of [SpesRobotics/teleop]: (https://github.com/Robot-learning-research-team/teleop) (changes: planar-push locks + 10 Hz command gate)
 - FANUC ROS2 control via the UofI-CDACS EtherNet/IP driver and MoveIt2.
 - [NVIDIA Isaac Sim](https://developer.nvidia.com/isaac/sim).
 
